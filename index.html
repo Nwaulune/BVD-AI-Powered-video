@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ifeanyi AI Video Generator</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #10111b;
+      color: white;
+    }
+
+    header {
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #292a39;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      color: #a78bfa;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 20px 35px;
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #b9b9c9;
+      line-height: 1.6;
+    }
+
+    .workspace {
+      max-width: 700px;
+      margin: 25px auto 70px;
+      padding: 28px;
+      background: #1b1c2b;
+      border: 1px solid #303146;
+      border-radius: 18px;
+    }
+
+    label {
+      display: block;
+      margin: 18px 0 9px;
+      font-weight: bold;
+    }
+
+    textarea, select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 9px;
+      border: 1px solid #393b50;
+      background: #11121e;
+      color: white;
+      font-size: 15px;
+    }
+
+    textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 22px;
+      padding: 16px;
+      border: none;
+      border-radius: 9px;
+      background: #8057ed;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #7045dc;
+    }
+
+    #message {
+      color: #c4b5fd;
+      line-height: 1.6;
+      margin-top: 18px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #999;
+      border-top: 1px solid #292a39;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">IFEA NY AI</div>
+    <span>Video Studio</span>
+  </header>
+
+  <section class="hero">
+    <h1>Bring Your Ideas to Life</h1>
+    <p>Create amazing videos using the power of artificial intelligence.</p>
+  </section>
+
+  <main class="workspace">
+    <h2>Create Your Video</h2>
+
+    <label for="prompt">Describe your video</label>
+    <textarea id="prompt"
+      placeholder="Example: A young Nigerian man walking through Lagos at sunset..."></textarea>
+
+    <label for="style">Video style</label>
+    <select id="style">
+      <option value="Realistic">Realistic</option>
+      <option value="Cinematic">Cinematic</option>
+      <option value="Animation">Animation</option>
+      <option value="Cartoon">Cartoon</option>
+    </select>
+
+    <label for="duration">Video duration</label>
+    <select id="duration">
+      <option value="5 seconds">5 seconds</option>
+      <option value="10 seconds">10 seconds</option>
+      <option value="15 seconds">15 seconds</option>
+    </select>
+
+    <button onclick="createVideo()">Create My Video</button>
+
+    <div id="message">
+      Your creative studio is ready. AI generation will be connected in our next stages.
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Ifeanyi AI Video Generator
+  </footer>
+
+  <script>
+    function createVideo() {
+      const prompt = document.getElementById("prompt").value.trim();
+      const message = document.getElementById("message");
+
+      if (!prompt) {
+        message.textContent = "Please describe the video you want to create.";
+        return;
+      }
+
+      message.textContent =
+        "Your video request has been captured! The AI generation engine will be connected in a future stage.";
+    }
+  </script>
+
+</body>
+</html>
